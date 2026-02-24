@@ -28,7 +28,7 @@ notebooks = [
   "jupyterlab>=4",
   "ipykernel>=6",
   "matplotlib>=3.8",
-  "anymap-ts[all]",
+  "anymap-ts",
 ]
 
 [tool.pytest.ini_options]
