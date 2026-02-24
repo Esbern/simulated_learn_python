@@ -29,7 +29,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ## Install the library (editable) + workshop tools
 
 ```bash
-pip install -e ".[dev,notebooks]"
+pip install -e ".[dev,notebooks,geo]"
 ```
 
 ## Optional: geospatial transforms (CRS)
