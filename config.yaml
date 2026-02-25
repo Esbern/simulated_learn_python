@@ -25,3 +25,64 @@ mqtt:
   # Client settings
   client_id_prefix: "simcity"
   keepalive_s: 60
+
+# Train network simulation configuration
+train_network:
+  # MQTT topic base for train network messages
+  mqtt_base_topic: "train_network"
+
+  # Train configuration
+  train:
+    capacity: 300  # Maximum passengers per train
+    departure_interval_minutes: 5  # Train departs every N minutes
+    base_occupancy_percent: 16  # Non-event passengers as percentage of capacity
+
+  # Station route (in order of stops)
+  route:
+    - name: "Entry Station 1"
+      type: "entry"
+      location:
+        lat: 55.6761
+        lon: 12.5683
+    - name: "Entry Station 2"
+      type: "entry"
+      location:
+        lat: 55.6771
+        lon: 12.5693
+    - name: "Entry Station 3"
+      type: "entry"
+      location:
+        lat: 55.6781
+        lon: 12.5703
+    - name: "Exit Station 1"
+      type: "exit"
+      location:
+        lat: 55.6791
+        lon: 12.5713
+      exit_percentage: 75  # Percentage of passengers that exit here
+    - name: "Exit Station 2"
+      type: "exit"
+      location:
+        lat: 55.6801
+        lon: 12.5723
+      exit_percentage: 25  # Percentage of passengers that exit here
+
+  # Passenger arrival rates by time of day
+  passenger_flow:
+    # Time ranges in 24-hour format (hour)
+    peak_hours:
+      - start: 17
+        end: 18
+        passengers_per_10min: 150
+      - start: 18
+        end: 19
+        passengers_per_10min: 300
+      - start: 19
+        end: 20
+        passengers_per_10min: 150
+    off_peak_passengers_per_10min: 50
+
+  # Control center dispatcher configuration
+  dispatcher:
+    # Threshold for triggering extra train deployment
+    waiting_threshold: 250  # If waiting passengers > this, deploy extra train
