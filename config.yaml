@@ -4,15 +4,15 @@
 # For other brokers: edit the mqtt.* fields (or create a separate config and load it).
 
 mqtt:
-  # HiveMQ Cloud is a common default.
-  # Replace with your cluster host, e.g. "xxxxxx.s1.eu.hivemq.cloud".
-  host: "c451c402b7fb41b399936cd5727a1d3f.s1.eu.hivemq.cloud"
+  # Local MQTT broker (e.g., Mosquitto running locally).
+  # For cloud brokers: replace with your cluster host, e.g. "xxxxxx.s1.eu.hivemq.cloud".
+  host: "localhost"
 
-  # For HiveMQ Cloud TLS MQTT the port is commonly 8883.
-  port: 8883
+  # Standard MQTT port without TLS is 1883.
+  port: 1883
 
-  # Use TLS for cloud brokers.
-  tls: true
+  # TLS disabled for local broker.
+  tls: false
 
   # Optional alternative if you connect via WebSockets instead of raw MQTT.
   # websockets: false

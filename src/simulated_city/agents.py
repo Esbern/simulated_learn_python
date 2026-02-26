@@ -625,7 +625,7 @@ class ControlCenterAgent:
         }
         
         topic = f"{self.mqtt_base_topic}/control_center/dispatch_request"
-        self.mqtt_publisher.publish_json(topic, json.dumps(payload), qos=1)
+        self.mqtt_publisher.publish_json(topic, json.dumps(payload), qos=0)
         
         # Record dispatch time
         self._last_dispatch_time[station_name] = datetime.now()
@@ -773,7 +773,7 @@ class DispatcherAgent:
                 "timestamp": datetime.now().isoformat(),
             }
             topic = f"{self.mqtt_base_topic}/dispatcher/train_deployed"
-            self.mqtt_publisher.publish_json(topic, json.dumps(payload), qos=1)
+            self.mqtt_publisher.publish_json(topic, json.dumps(payload), qos=0)
             
             # Start the train agent asynchronously (needs to be done in async context)
             # The train will be started by the main simulation loop

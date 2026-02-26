@@ -1,6 +1,6 @@
 # Implementation Plan: Train Capacity Simulation
 
----
+--- 
 
 ## PHASE 1: Configuration & Infrastructure
 *Goal: Set up simulation parameters and data structures*

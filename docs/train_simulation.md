@@ -717,7 +717,7 @@ finally:
 
 ## Implementation Status
 
-### ✅ Completed (Phases 1-2)
+### ✅ Completed (All Phases)
 
 **Phase 1: Configuration & Infrastructure**
 - [x] Extended `config.yaml` with train network settings
@@ -731,30 +731,25 @@ finally:
 - [x] ControlCenterAgent (threshold evaluation, dispatch requests)
 - [x] DispatcherAgent (extra train deployment)
 
-### 🚧 In Progress (Phase 3)
-
 **Phase 3: Testing & Validation**
-- [ ] Unit tests for agent logic
-- [ ] End-to-end smoke tests
-- [ ] MQTT message validation
-
-### 📋 Planned (Phases 4-6)
+- [x] Unit tests for agent logic (`tests/test_agents.py` — 19 tests)
+- [x] End-to-end smoke tests (`tests/test_train_simulation.py` — 3 tests)
+- [x] MQTT message validation
 
 **Phase 4: Exercise Notebooks**
-- [ ] `05_train_network_basics.ipynb` — Single train simulation
-- [ ] `05_train_passenger_source.ipynb` — Passenger generation
-- [ ] `05_train_control_center.ipynb` — Control logic
-- [ ] `05_train_full_simulation.ipynb` — Complete orchestration
+- [x] `05_train_network_basics.ipynb` — Single train simulation
+- [x] `05_train_passenger_source.ipynb` — Passenger generation
+- [x] `05_train_control_center.ipynb` — Control logic
+- [x] `05_train_full_simulation.ipynb` — Complete orchestration
 
 **Phase 5: Visualization & Monitoring**
-- [ ] Live map viewer with train positions
-- [ ] Real-time metrics dashboard
-- [ ] Performance analysis tools
+- [x] `05_train_map_viewer.ipynb` — Live map viewer with train positions
+- [x] `05_train_dashboard.ipynb` — Real-time metrics dashboard with performance analysis
 
 **Phase 6: Documentation & Exercises**
 - [x] Train simulation documentation (this file)
-- [ ] Exercise prompts and solutions
-- [ ] Workshop handouts
+- [x] Exercise prompts and solutions (`docs/exercises.md`)
+- [x] Workshop notebooks with hands-on activities
 
 ---
 
